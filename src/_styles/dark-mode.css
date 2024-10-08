@@ -1,0 +1,60 @@
+/* define CSS custom properties */
+
+[data-theme='dark'] {
+  --background-color: #1a1a1a;
+  --text-color: #ffffff;
+  --link-color: #3a9fff;
+  --header-background: #2c2c2c;
+  --footer-background: #2c2c2c;
+}
+
+[data-theme='light'] {
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --link-color: #0780ff;
+  --header-background: #f8f8f8;
+  --footer-background: #f8f8f8;
+}
+
+/* apply CSS custom properties */
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--link-color);
+}
+
+.header {
+  background-color: var(--header-background);
+}
+
+.footer {
+  background-color: var(--footer-background);
+}
+
+/* media queries */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --link-color: #3a9fff;
+    --header-background: #2c2c2c;
+    --footer-background: #2c2c2c;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    --background-color: #ffffff;
+    --text-color: #333333;
+    --link-color: #0780ff;
+    --header-background: #f8f8f8;
+    --footer-background: #f8f8f8;
+  }
+}
+
+/*:root:not([data-theme]) selector ensures these are only applied when no manual theme selection has been made.*/
