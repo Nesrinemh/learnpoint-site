@@ -1,6 +1,6 @@
 // Dark mode toggle
 
-// DOMContentLoaded event listener is used to ensure it runs after the DOM is fully loaded
+// DOMContentLoaded: to ensure it runs after the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
   // Select all elements with the data-theme-toggle attribute
   const themeToggles = document.querySelectorAll(
