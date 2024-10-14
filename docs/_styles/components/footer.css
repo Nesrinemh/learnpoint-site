@@ -74,7 +74,7 @@
 .footer__select-theme-panel {
   display: flex;
   gap: 4px;
-  text-align: centerc;
+  text-align: center;
 }
 
 .footer__select-language-button,
@@ -89,6 +89,15 @@
   color: #666;
   appearance: none;
   -webkit-appearance: none;
+}
+
+html[data-theme='dark'] .footer__link {
+  color: #b3b3b3;
+}
+
+html[data-theme='dark'] .footer__select-language-button,
+html[data-theme='dark'] .footer__select-theme-button {
+  color: #999;
 }
 
 html[lang='en']
